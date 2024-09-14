@@ -1,0 +1,81 @@
+/* Style for slider container */
+.slider-container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Style for each slide */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Captions below the images */
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Navigation controls */
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.navigation button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Thumbnail row */
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.thumbnails img {
+    width: 100px;
+    margin: 0 5px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.thumbnails img:hover {
+    opacity: 1;
+}
+
+/* Ensure slider is responsive */
+@media (max-width: 768px) {
+    .thumbnails img {
+        width: 70px;
+    }
+}
